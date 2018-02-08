@@ -51,11 +51,16 @@ Windows 10; NVIDIA显卡; Python 3.6; VS 2017; CUDA 9.1; PyTorch 0.3.0
 # 从0训练
 
 清空weights文件夹, 最好备份.
+
 打开命令行, cd到./py目录下.
+
 运行: python scratch.py
+
 
 # 继续训练
 
 打开命令行, cd到./py目录下.
+
 运行: python fullauto.py
+
 默认打开5进程, 内存不够的话可以考虑减少进程数量, 在config.py里设置.
