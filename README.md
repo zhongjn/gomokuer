@@ -2,7 +2,7 @@
 
 一个小小的五子棋AI
 
-PS：Python部分代码写得偷懒了，见谅。
+PS: Python部分代码写得偷懒了, 见谅.
 
 
 # 可能需要
@@ -14,25 +14,25 @@ Windows 10; NVIDIA显卡; Python 3.6; VS 2017; CUDA 9.1; PyTorch 0.3.0
 
 1. Python 3.6
 
-最好用Anaconda (因为PyTorch并不官方支持Windows, 用conda安装比较方便).
+    最好用Anaconda (因为PyTorch并不官方支持Windows, 用conda安装比较方便).
 
-链接: https://www.anaconda.com/download/
+    链接: https://www.anaconda.com/download/
 
-安装到英文路径, 并且把该路径添加到PATH和PYTHONHOME环境变量里。
+    安装到英文路径, 并且把该路径添加到PATH和PYTHONHOME环境变量里.
 
 
 2. CUDA 9.1
 
-链接: https://developer.nvidia.com/cuda-downloads
+    链接: https://developer.nvidia.com/cuda-downloads
 
 
 3. PyTorch 0.3.0
 
-开始菜单里找到Anaconda, 启动Anaconda Prompt.
+    开始菜单里找到Anaconda, 启动Anaconda Prompt.
 
-运行: conda install -c peterjc123 pytorch cuda90
+    运行: conda install -c peterjc123 pytorch cuda90
 
-可能要很久, 有科学上网工具会比较快.
+    可能要很久, 有科学上网工具会比较快.
 
 
 # 启动
