@@ -1,8 +1,19 @@
 # gomokuer
 
-基于强化学习的一个小小的五子棋AI
+基于强化学习的一个小小的五子棋AI.
 
-PS: Python部分代码写得偷懒了, 见谅.
+规则: 无禁手. 有禁没做进去...
+
+PS: Python部分代码写得比较偷懒, 见谅.
+
+
+# Timeline
+
+Day 0: 乱下.
+
+Day 2: 击败作者.
+
+Day 3: QQ游戏大厅五子棋高分区, 执白高胜率.
 
 
 # 可能需要
@@ -55,6 +66,8 @@ Windows 10; NVIDIA显卡; Python 3.6; VS 2017; CUDA 9.1; PyTorch 0.3.0
 打开命令行, cd到./py目录下.
 
 运行: python scratch.py
+
+然后: 看下面↓↓
 
 
 # 继续训练
