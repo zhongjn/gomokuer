@@ -17,7 +17,7 @@ Windows 10; NVIDIA显卡; Python 3.6; VS 2017; CUDA 9.1; PyTorch 0.3.0
 
 3. PyTorch 0.3.0
 开始菜单里找到Anaconda, 启动Anaconda Prompt.
-然后运行: conda install -c peterjc123 pytorch cuda90
+运行: conda install -c peterjc123 pytorch cuda90
 可能要很久, 有科学上网工具会比较快.
 
 # 启动
