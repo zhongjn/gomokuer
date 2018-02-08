@@ -2,6 +2,8 @@
 
 基于强化学习的一个小小的五子棋AI.
 
+https://deepmind.com/documents/119/agz_unformatted_nature.pdf
+
 规则: 无禁手. 有禁没做进去...
 
 PS: Python部分代码写得比较偷懒, 见谅.
