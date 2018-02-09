@@ -1,23 +1,24 @@
 import model
 import os
+import config as C
 
 
 def weight0():
     mod = model.Model()
-    mod.save_weight("../weights/0.pkl")
-    with open("../weights/current/0", mode="w"):
+    mod.save_weight(C.WEIGHTS_DIRECTORY + "/0.pkl")
+    with open(C.WEIGHTS_DIRECTORY + "/current/0", mode="w"):
         pass
-    with open("../weights/best/0", mode="w"):
+    with open(C.WEIGHTS_DIRECTORY + "/best/0", mode="w"):
         pass
 
 
 def get_weight_path(index):
-    return "../weights/{0}.pkl".format(index)
+    return C.WEIGHTS_DIRECTORY + "/{0}.pkl".format(index)
 
 
 def get_current_index():
-    return int(os.listdir("../weights/current")[0])
+    return int(os.listdir(C.WEIGHTS_DIRECTORY + "/current")[0])
 
 
 def get_best_index():
-    return int(os.listdir("../weights/best")[0])
+    return int(os.listdir(C.WEIGHTS_DIRECTORY + "/best")[0])

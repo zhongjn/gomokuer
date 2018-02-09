@@ -2,7 +2,6 @@ import torch
 import config as C
 
 
-
 def conv3x3(n_in=C.FILTERS, n_out=C.FILTERS):
     return torch.nn.Conv2d(n_in, n_out, kernel_size=3, padding=1)
 
@@ -15,12 +14,9 @@ def batchnorm2d(n_features=C.FILTERS):
 class ResidualBlock(torch.nn.Module):
     def __init__(self):
         super(ResidualBlock, self).__init__()
-        self.block = torch.nn.Sequential(
-            conv3x3(),
-            batchnorm2d(),
-            torch.nn.ReLU(),
-            conv3x3(),
-            batchnorm2d())
+        self.block = torch.nn.Sequential(conv3x3(), batchnorm2d(),
+                                         torch.nn.ReLU(), conv3x3(),
+                                         batchnorm2d())
         self.relu_out = torch.nn.ReLU()
 
     def forward(self, x):
@@ -80,6 +76,7 @@ class ResNet(torch.nn.Module):
             ResidualBlock(),
             ResidualBlock(),
             ResidualBlock())
+
         self.policy_head = PolicyHead()
         self.value_head = ValueHead()
 

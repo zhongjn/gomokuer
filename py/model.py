@@ -33,7 +33,7 @@ class Model:
         if is_train:
             self.optimizer = torch.optim.SGD(
                 self.resnet.parameters(),
-                lr=C.LEARING_RATE,
+                lr=C.LEARNING_RATE,
                 momentum=0.9,
                 weight_decay=1E-4)
             self.policy_loss_fn = MultiLableCrossEntropy()
@@ -101,7 +101,7 @@ class Model:
             self.optimizer.zero_grad()
             policy, value = self.resnet.forward(obsv_var)
             policy_loss = self.policy_loss_fn.forward(policy, prob_var)
-            value_loss = self.value_loss_fn.forward(value, result_var)
+            value_loss = C.VALUE_LOSS_FACTOR * self.value_loss_fn.forward(value, result_var)
             
             train_policy_loss += policy_loss.data[0]
             train_value_loss += value_loss.data[0]
@@ -144,7 +144,7 @@ class Model:
 
             policy, value = self.resnet.forward(obsv_var)
             policy_loss = self.policy_loss_fn.forward(policy, prob_var)
-            value_loss = self.value_loss_fn.forward(value, result_var)
+            value_loss = C.VALUE_LOSS_FACTOR * self.value_loss_fn.forward(value, result_var)
 
             test_policy_loss += policy_loss.data[0]
             test_value_loss += value_loss.data[0]

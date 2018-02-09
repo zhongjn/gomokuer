@@ -8,8 +8,10 @@ import merge
 def run():
     for i in range(C.SELFPLAY_PROCESS_COUNT):
         os.system(
-            "start ../gomokuer.exe selfplay -w ../weights/{0}.pkl -r {1}".
-            format(util.get_best_index(), C.SELFPLAY_TARGET_ROUNDS / C.SELFPLAY_PROCESS_COUNT + 100))
+            "start ../gomokuer.exe selfplay -w {wdir}/{w}.pkl -r {r}".format(
+                wdir=C.WEIGHTS_DIRECTORY,
+                w=util.get_best_index(),
+                r=(C.SELFPLAY_TARGET_ROUNDS / C.SELFPLAY_PROCESS_COUNT + 100)))
 
     while True:
         games = len(os.listdir("../games/raw"))

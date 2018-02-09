@@ -9,9 +9,9 @@ import config as C
 
 
 def run():
-    gen = int(os.listdir("../weights/current")[0])
+    gen = int(os.listdir(C.WEIGHTS_DIRECTORY + "/current")[0])
     mod = model.Model()
-    mod.load_weight("../weights/{0}.pkl".format(gen))
+    mod.load_weight(C.WEIGHTS_DIRECTORY + "/{0}.pkl".format(gen))
 
     print("preparing data...")
     obsv, prob, result = data.load()
@@ -40,10 +40,10 @@ def run():
             # mod.train(train_obsv, train_prob, train_result)
             mod.test(test_obsv, test_prob, test_result)
 
-        mod.save_weight("../weights/{0}.pkl".format(gen + 1))
-        with open("../weights/eval/queue/{0}".format(gen + 1), mode="w"):
-            pass
-        os.rename("../weights/current/{0}".format(gen), "../weights/current/{0}".format(gen + 1))
+            mod.save_weight(C.WEIGHTS_DIRECTORY + "/{0}.pkl".format(gen + 1))
+            with open(C.WEIGHTS_DIRECTORY + "/eval/queue/{0}".format(gen + 1), mode="w"):
+                pass
+        os.rename(C.WEIGHTS_DIRECTORY + "/current/{0}".format(gen), C.WEIGHTS_DIRECTORY + "/current/{0}".format(gen + 1))
         gen = gen + 1
 
 

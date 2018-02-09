@@ -6,4 +6,6 @@ no_use
 x64
 .vs
 .vscode
-weights/eval/result/*
+weights5
+*/eval/result/*
+Debug
