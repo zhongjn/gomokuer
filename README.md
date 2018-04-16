@@ -17,6 +17,9 @@ Day 2: 击败作者.
 
 Day 3: QQ游戏大厅五子棋高分区, 执白高胜率.
 
+Day N: 执黑（非必胜开局）击败弈心2015
+
+![image](https://github.com/zhongjn/gomokuer/blob/master/vs_Yixin_2015.gif)
 
 # 可能需要
 
